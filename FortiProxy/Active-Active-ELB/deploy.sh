@@ -9,7 +9,7 @@ echo "
 
 "
 #echo "--> Auto accepting terms for Azure Marketplace deployments ..."
-#az vm image terms accept --publisher fortinet --offer fortinet_fortigate-vm_v5 --plan fortinet_fg-vm
+#az vm image terms accept --publisher fortinet --offer fortinet_fortiproxy-vm_v5 --plan fortinet_fg-vm
 
 # Stop on error
 set +e
@@ -93,7 +93,7 @@ az group create --location "$location" --name "$rg"
 echo "--> Validation deployment in $rg resource group ..."
 az deployment group validate --resource-group "$rg" \
                            --template-file azuredeploy.json \
-                           --parameters adminUsername="$username" adminPassword=$passwd fortigateNamePrefix=$prefix
+                           --parameters adminUsername="$username" adminPassword=$passwd fortiproxyNamePrefix=$prefix
 result=$?
 if [ $result != 0 ];
 then
@@ -105,7 +105,7 @@ fi
 echo "--> Deployment of $rg resources ..."
 az deployment group create --confirm-with-what-if --resource-group "$rg" \
                            --template-file azuredeploy.json \
-                           --parameters adminUsername="$username" adminPassword=$passwd fortigateNamePrefix=$prefix
+                           --parameters adminUsername="$username" adminPassword=$passwd fortiproxyNamePrefix=$prefix
 result=$?
 if [[ $result != 0 ]];
 then
