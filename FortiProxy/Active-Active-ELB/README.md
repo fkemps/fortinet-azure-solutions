@@ -1,4 +1,4 @@
-# Active/Active load-balanced pair of clustered FortiProxy for resilience and scale
+# Active/Active load-balanced pair of clustered FortiProxy
 
 ## Introduction
 
