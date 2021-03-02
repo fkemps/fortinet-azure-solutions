@@ -664,7 +664,7 @@
                         },
                         {
                             "diskSizeGB": 30,
-                            "lun": 0,
+                            "lun": 1,
                             "createOption": "Empty"
                         }
                     ]
@@ -737,7 +737,7 @@
                         },
                         {
                             "diskSizeGB": 30,
-                            "lun": 0,
+                            "lun": 1,
                             "createOption": "Empty"
                         }
                     ]
