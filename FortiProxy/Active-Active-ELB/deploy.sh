@@ -8,7 +8,6 @@ echo "
 ##############################################################################################################
 
 "
-
 #echo "--> Auto accepting terms for Azure Marketplace deployments ..."
 #az vm image terms accept --publisher fortinet --offer fortinet_fortiproxy-vm_v5 --plan fortinet_fg-vm
 
